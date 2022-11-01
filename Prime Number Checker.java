@@ -9,9 +9,11 @@ class Main {
       j++;
     }
     
-    if (i % prime[j] == 0){
+    if (i < 2){
+      System.out.prinln("NULL");
+    } else if (i % prime[j] == 0 && i != 2){
       System.out.println(i + " is composite.");
-    } else if (i % prime[j] != 0 && (double)i/prime[j] <= prime[j]){
+    } else if ((i % prime[j] != 0 && (double)i/prime[j] <= prime[j]) || i == 2){
       System.out.println(i + " is prime.");
     }
   }
